@@ -6,8 +6,7 @@
  * @return {number[][]}
  */
 
-const isOverlapping = ([x1, x2], [y1, y2]) =>
-  Math.max(x1, y1) <= Math.min(x2, y2);
+const isOverlapping = ([x1, x2], [y1, y2]) => y1 <= x2 && x1 <= y2;
 const getIntersection = ([x1, x2], [y1, y2]) => [
   Math.max(x1, y1),
   Math.min(x2, y2),

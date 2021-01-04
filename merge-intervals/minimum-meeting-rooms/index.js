@@ -1,7 +1,6 @@
 // https://ttzztt.gitbooks.io/lc/content/heap/meeting-room.html
 
-const isOverlapping = ([x1, x2], [y1, y2]) =>
-  Math.max(x1, y1) <= Math.min(x2, y2);
+const isOverlapping = ([x1, x2], [y1, y2]) => y1 <= x2 && x1 <= y2;
 
 // sort in place
 const sortIntervals = (intervals) => {
