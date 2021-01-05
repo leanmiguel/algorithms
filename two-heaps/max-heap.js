@@ -3,6 +3,9 @@ class MaxHeap {
     this.values = [];
   }
 
+  length() {
+    return this.values.length;
+  }
   insert(value) {
     this.values.push(value);
 

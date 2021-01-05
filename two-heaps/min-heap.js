@@ -8,6 +8,13 @@ class MinHeap {
     this.bubbleUp(this.data.length - 1);
   }
 
+  peek() {
+    return this.data[0];
+  }
+  length() {
+    return this.data.length;
+  }
+
   bubbleUp(index) {
     while (index > 0) {
       // get the parent
@@ -25,7 +32,7 @@ class MinHeap {
     }
   }
 
-  extractMin() {
+  pop() {
     var min = this.data[0];
 
     // set first element to last element
