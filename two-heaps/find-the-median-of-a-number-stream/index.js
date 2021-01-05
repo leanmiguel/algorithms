@@ -1,5 +1,3 @@
-//https://leetcode.com/problems/find-median-from-data-stream/
-
 const MinHeap = require("../min-heap");
 const MaxHeap = require("../max-heap");
 class MedianFinder {
@@ -38,7 +36,9 @@ class MedianFinder {
     if (this.dataStream.length % 2 === 0)
       return (this.minHeap.peek() + this.maxHeap.peek()) / 2;
     else {
-      return this.minHeap.peek();
+      return this.maxHeap.length() > this.minHeap.length()
+        ? this.maxHeap.peek()
+        : this.minHeap.peek();
     }
   }
 }
